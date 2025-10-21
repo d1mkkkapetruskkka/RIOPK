@@ -72,10 +72,10 @@
 ### User-flow диаграммы
 
 #### **User-flow для роли "Клиент"**
-<img width="5284" height="8484" alt="image" src="https://github.com/d1mkkkapetruskkka/RIOPK/blob/main/User-Flow/user-flow%20%D0%9A%D0%BB%D0%B8%D0%B5%D0%BD%D1%82.png" />
+<img width="1365" height="1232" alt="user-flow Клиент" src="https://github.com/user-attachments/assets/43c51a81-8f70-4035-ae65-377ca2ee7eb2" />
 
 #### **User-flow для роли "Менеджер"**
-<img width="6884" height="8084" alt="image" src="https://github.com/d1mkkkapetruskkka/RIOPK/blob/main/User-Flow/user-flow%20%D0%9C%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%B5%D1%80.png" />
+<img width="1206" height="984" alt="user-flow Менеджер" src="https://github.com/user-attachments/assets/c1c35040-65bf-4a05-b24b-274747f31df2" />
 
 
 ## **Детали реализации**
