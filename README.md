@@ -37,19 +37,21 @@
 2. [Функциональные возможности](#Функциональные_возможности)
 	1. [Диаграмма вариантов использования](#Диаграмма_вариантов_использования)
 	2. [User-flow диаграммы](#User-flow_диаграммы)
-3. [Детали реализации](#Детали_реализации)
+3. [Пользовательский интерфейс](#Пользовательский_интерфейс)
+	1. [Примеры экранов UI](#Примеры_экранов_UI)
+4. [Детали реализации](#Детали_реализации)
 	1. [UML-диаграммы](#UML-диаграммы)
 	2. [Спецификация API](#Спецификация_API)
 	3. [Безопасность](#Безопасность)
 	4. [Оценка качества кода](#Оценка_качества_кода)
-4. [Тестирование](#Тестирование)
+5. [Тестирование](#Тестирование)
 	1. [Unit-тесты](#Unit-тесты)
 	2. [Интеграционные тесты](#Интеграционные_тесты)
-5. [Установка и  запуск](#installation)
+6. [Установка и  запуск](#installation)
 	1. [Манифесты для сборки docker образов](#Манифесты_для_сборки_docker_образов)
 	2. [Манифесты для развертывания k8s кластера](#Манифесты_для_развертывания_k8s_кластера)
-6. [Лицензия](#Лицензия)
-7. [Контакты](#Контакты)
+7. [Лицензия](#Лицензия)
+8. [Контакты](#Контакты)
 
 ---
 
@@ -77,6 +79,79 @@
 #### **User-flow для роли "Менеджер"**
 <img width="1206" height="984" alt="user-flow Менеджер" src="https://github.com/user-attachments/assets/c1c35040-65bf-4a05-b24b-274747f31df2" />
 
+## **Пользовательский интерфейс**
+
+### Примеры экранов UI
+
+#### **Общие страницы**
+
+- главная страница
+
+<img width="975" height="438" alt="image" src="https://github.com/user-attachments/assets/fdfbceda-5cd3-4207-b2a2-ee1850a9d2d2" />
+
+- страница "О нас"
+
+<img width="975" height="444" alt="image" src="https://github.com/user-attachments/assets/08f0d984-bb71-4758-9639-16e9f31b8c5a" />
+
+- стартовая страница регистрации
+
+<img width="876" height="396" alt="image" src="https://github.com/user-attachments/assets/78ddbaec-50d3-4c41-995b-2a5dd0844af3" />
+
+- авторизация
+
+<img width="975" height="445" alt="image" src="https://github.com/user-attachments/assets/e23abb3c-dac4-445d-b2e2-30f18259c33d" />
+
+#### **Примеры экранов UI для роли "Менеджер"**
+
+- регистрация
+
+<img width="975" height="448" alt="image" src="https://github.com/user-attachments/assets/1b5e3786-7424-42f5-b62c-07a979656f17" />
+
+- управление услугами
+
+<img width="975" height="382" alt="image" src="https://github.com/user-attachments/assets/0403ce9a-b071-4eef-8cea-9049fa7b1a3a" />
+
+- форма изменения услуг
+
+<img width="975" height="443" alt="image" src="https://github.com/user-attachments/assets/afd1cff6-adfd-4382-8300-b120938a6a94" />
+
+- процесс добавления объявления
+
+<img width="975" height="443" alt="image" src="https://github.com/user-attachments/assets/efdb9132-d476-430e-b71d-dad8f88f373f" />
+
+- dashboard для управления статусов заявок
+
+<img width="905" height="410" alt="image" src="https://github.com/user-attachments/assets/062e6cf0-1df6-4987-8302-3846318f94d7" />
+
+- cтраница аналитики
+
+<img width="974" height="445" alt="image" src="https://github.com/user-attachments/assets/ea3fb2cc-c9e4-49a0-ad72-decad2cecbbc" />
+
+#### **Примеры экранов UI для роли "Клиент"**
+
+- регистрация
+
+<img width="897" height="407" alt="image" src="https://github.com/user-attachments/assets/07340f00-d838-4a04-9106-631dc197103d" />
+
+- каталог услуг
+
+<img width="843" height="381" alt="image" src="https://github.com/user-attachments/assets/bf9b0385-2121-4f83-b36d-d81f2a2a0e2a" />
+
+- карточка бытовой услуги
+
+<img width="896" height="304" alt="image" src="https://github.com/user-attachments/assets/2b698fa8-07ae-495a-a3f9-e0530e85e86c" />
+
+- раздел «Запись на услугу»
+
+<img width="481" height="526" alt="image" src="https://github.com/user-attachments/assets/4c22998f-701d-4b18-97f4-7933db0ca799" />
+
+- страница заявок клиента
+
+<img width="975" height="210" alt="image" src="https://github.com/user-attachments/assets/5fb966ba-ca7c-4986-be95-43eef6f2dccf" />
+
+- форма оставление отзыва
+
+<img width="977" height="441" alt="image" src="https://github.com/user-attachments/assets/d9dae09b-a594-4312-b0ed-723cfa085ee6" />
 
 ## **Детали реализации**
 
