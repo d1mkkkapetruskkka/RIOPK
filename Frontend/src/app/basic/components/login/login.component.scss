@@ -1,0 +1,59 @@
+[nz-form] {
+    max-width: 600px;
+}
+
+.phone-select {
+    width: 70px;
+}
+
+.child {
+    padding: 50px;
+    position: relative; 
+    width: 380px;
+    background-color: white;
+    margin: 0 auto; 
+    box-shadow: 1px 1px 15px -7px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+nz-form-control {
+    min-width: 280px;
+}
+
+.parent {
+    width: 100%;
+    height: 100vh; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.login-form-margin {
+    margin-bottom: 16px;
+}
+
+.login-form-forgot {
+    float: right;
+}
+
+.login-form-button {
+    width: 100%;
+}
+
+button {
+    background-color: #001529;
+    border: none;
+}
+
+.imgDiv {
+    width: 100%;
+    vertical-align: middle;
+    margin-bottom: 40px;
+}
+
+.bg {
+    background-color: #f5f7f9;
+}
+
+
+

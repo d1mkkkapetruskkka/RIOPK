@@ -1,0 +1,140 @@
+.analytics-page {
+  max-width: 1100px;
+  margin: 30px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  padding: 0 20px;
+  background: #f9fafb;
+}
+
+.analytics-toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.analytics-toolbar .report-btn {
+  flex: 1 1 200px;
+  max-width: 300px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 12px 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.4);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.analytics-toolbar .report-btn:hover,
+.analytics-toolbar .report-btn:focus {
+  background: #1565c0;
+  box-shadow: 0 6px 18px rgba(21, 101, 192, 0.6);
+  outline: none;
+}
+
+.analytics-charts-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 440px;
+}
+
+.chart-block {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 32px 32px 40px 32px;
+  flex: 1 1 400px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 460px; /* фиксированная высота для стабильного рендера диаграмм */
+}
+
+.chart-block:hover,
+.chart-block:focus-within {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+.chart-label {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 24px;
+  text-align: center;
+  user-select: none;
+}
+
+.chart-canvas {
+  width: 100% !important;
+  height: 320px !important; /* высота диаграммы */
+  max-width: 100%;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.chart-summary {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #555;
+  text-align: center;
+  user-select: none;
+  letter-spacing: 0.02em;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 900px) {
+  .analytics-charts-row {
+    flex-direction: column;
+    gap: 32px;
+    min-height: auto;
+  }
+
+  .chart-block {
+    max-width: 100%;
+    height: auto;
+    padding: 24px 24px 32px 24px;
+  }
+
+  .chart-canvas {
+    height: 280px !important;
+  }
+}
+.chart-with-legend {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.chart-canvas {
+  width: 300px !important;
+  height: 300px !important;
+}
+
+.legend-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  vertical-align: middle;
+  border-radius: 3px;
+}

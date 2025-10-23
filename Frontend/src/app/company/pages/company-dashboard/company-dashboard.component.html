@@ -1,0 +1,36 @@
+<nz-table #basicTable [nzData]="bookings" [nzPageSize]="20" [nzShowPagination]="'false'" style="padding: 20px;" ngSkipHydration>
+    <thead>
+        <tr>
+            <th class="heading">Имя клиента</th>
+            <th class="heading">Услуга</th>
+            <th class="heading">Дата</th>
+            <th class="heading">Статус</th>
+            <th class="heading">Действие</th>
+        </tr>
+    </thead>
+        <tbody>
+            <tr *ngFor="let booking of basicTable.data">
+            <td style="font-weight: 600">{{ booking.userName }}</td>
+            <td style="font-weight: 600">{{ booking.serviceName }}</td>
+            <td>{{ booking.bookDate | date : "dd/MM/yyyy" }}</td>
+            <td style="font-weight: 600">
+            {{ booking.reservationStatus === 'PENDING' ? 'Ожидание' :
+            booking.reservationStatus === 'APPROVED' ? 'Принято' :
+            booking.reservationStatus === 'REJECTED' ? 'Отклонено' :  
+            booking.reservationStatus }} 
+            </td>
+    <td>
+        <span *ngIf="booking.reservationStatus === 'PENDING'">
+            <button style="margin-left: 10px" nzSize="small" nz-button nzType="primary"
+                (click)="changeBookingStatus(booking.id, 'Approve')">
+                Принять
+            </button>
+            <button style="margin-left: 10px" nzSize="small" nz-button nzType="primary" nzDanger
+                (click)="changeBookingStatus(booking.id, 'Reject')">
+                Отклонить
+            </button>
+         </span>
+    </td>
+        </tr>
+        </tbody>
+    </nz-table>

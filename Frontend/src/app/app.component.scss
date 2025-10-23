@@ -1,0 +1,113 @@
+$secondary-color: #141a33;
+$primary-color: #bb2929; // ваш красный цвет
+$white: #ffffff;
+$white-one: #fcfcfc;
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 57px;
+  background-color: $primary-color;
+  height: 60px;
+
+  .logo {
+    h2 {
+      margin: 0;
+      color: $white;
+      padding-left: 10px;
+      font-weight: 700;
+      font-size: 24px;
+      user-select: none;
+    }
+    .logo-link {
+      text-decoration: none;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    a[nz-button],
+    .dropdown-trigger {
+      color: $white;
+      font-weight: 300;
+      font-size: 15px;
+      border-radius: 0;
+      padding: 6px 16px;
+      transition: background-color 0.2s, color 0.2s;
+      cursor: pointer;
+
+      &:hover,
+      &.active,
+      &[routerLinkActive].active {
+        background-color: $secondary-color;
+        color: $white !important;
+      }
+    }
+  }
+}
+
+.dropdown-menu {
+  background: $white;
+  border: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  padding: 0;
+
+  ul[nz-menu] {
+    margin: 0;
+    padding: 0;
+
+    li[nz-menu-item] {
+      padding: 0;
+
+      a {
+        color: $secondary-color !important;
+        padding: 8px 16px;
+        display: block;
+        transition: color 0.3s, background-color 0.3s;
+
+        &:hover {
+          background: transparent !important;
+          color: $primary-color !important;
+        }
+
+        &.active-dropdown-item {
+          color: $primary-color !important;
+          font-weight: 500;
+          background: rgba($primary-color, 0.1) !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    padding: 15px;
+
+    .nav-links {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 15px;
+      gap: 8px;
+
+      a[nz-button],
+      .dropdown-trigger {
+        width: 100%;
+        text-align: left;
+        padding: 8px 0;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    width: 100%;
+    position: relative !important;
+    box-shadow: none;
+  }
+}

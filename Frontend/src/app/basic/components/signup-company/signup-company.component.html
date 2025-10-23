@@ -1,0 +1,52 @@
+<div class="bg">
+    <div class="parent">
+        <div class="child">
+            <div nz-col>
+                <h1 style="text-align: center;">Регистрация менеджера</h1>
+            </div>
+
+            <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+                <nz-form-item>
+                    <nz-form-control nzHasFeedback nzErrorTip="Введенный E-mail недействителен!">
+                        <input nz-input placeholder="E-mail" formControlName="email" id="email" />
+                    </nz-form-control>
+                </nz-form-item>
+
+                <nz-form-item>
+                    <nz-form-control nzHasFeedback nzErrorTip="Введенный пароль недействителен!">
+                        <input nz-input type="password" placeholder="Пароль" formControlName="password" id="password" />
+                    </nz-form-control>
+                </nz-form-item>
+
+                <nz-form-item>
+                    <nz-form-control nzHasFeedback nzErrorTip="Введенный повторный пароль недействителен!">
+                        <input nz-input type="password" placeholder="Повторный пароль" formControlName="checkPassword" id="confirmPassword" />
+                    </nz-form-control>
+                </nz-form-item>
+
+                <nz-form-item>
+                    <nz-form-control nzHasFeedback nzErrorTip="Введенное имя недействительное!">
+                        <input nz-input placeholder="Имя" formControlName="name" id="name" />
+                    </nz-form-control>
+                </nz-form-item>
+
+                <nz-form-item>
+                    <nz-form-control nzHasFeedback nzErrorTip="Введенная фамилия недействительная!">
+                        <input nz-input placeholder="Фамилия" formControlName="lastname" id="lastname" />
+                    </nz-form-control>
+                </nz-form-item>
+
+                <nz-form-item>
+                    <nz-form-control nzHasFeedback nzErrorTip="Введенный номер телефона недействителен!">
+                        <input nz-input placeholder="Номер телефона" formControlName="phone" id="phone" />
+                    </nz-form-control>
+                </nz-form-item>
+
+                <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">
+                    Регистрация
+                </button>
+                <a routerLink="/login">Уже есть аккаунт</a>
+            </form>
+        </div>
+    </div>
+</div>

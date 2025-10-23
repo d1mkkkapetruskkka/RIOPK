@@ -1,0 +1,63 @@
+<div *ngIf="!isClientLoggedIn && !isCompanyLoggedIn">
+  <nz-header class="main-header" nz-row nzType="flex">
+    <div class="logo">
+      <a [routerLink]="['/home']" class="logo-link">
+        <h2>ServiceHub</h2>
+      </a>
+    </div>
+    <div class="nav-links">
+      <a nz-button nzType="link" routerLink="/register" routerLinkActive="active">Регистрация</a>
+      <a nz-button nzType="link" routerLink="/login" routerLinkActive="active">Вход</a>
+      <a nz-button nzType="link" routerLink="/about" routerLinkActive="active">О нас</a>
+    </div>
+  </nz-header>
+</div>
+
+<div *ngIf="isClientLoggedIn">
+  <nz-header class="main-header" nz-row nzType="flex">
+    <div class="logo">
+      <a [routerLink]="['/home']" class="logo-link">
+        <h2>ServiceHub</h2>
+      </a>
+    </div>
+    <div class="nav-links">
+      <a nz-button nzType="link" routerLink="/client/catalog" routerLinkActive="active">Каталог</a>
+      <a nz-button nzType="link" routerLink="/client/bookings" routerLinkActive="active">Мои заявки</a>
+      <a nz-button nzType="link" routerLink="/about" routerLinkActive="active">О нас</a>
+      <a nz-button nzType="link" (click)="logout()" routerLinkActive="active">Выход</a>
+    </div>
+  </nz-header>
+</div>
+
+<div *ngIf="isCompanyLoggedIn">
+  <nz-header class="main-header" nz-row nzType="flex">
+    <div class="logo">
+      <a [routerLink]="['/home']" class="logo-link">
+        <h2>ServiceHub</h2>
+      </a>
+    </div>
+    <div class="nav-links">
+      <a nz-button nzType="link" routerLink="/company/analytics" routerLinkActive="active">Аналитика</a>
+      <a nz-button nzType="link" routerLink="/company/dashboard" routerLinkActive="active">Дашборд</a>
+
+      <button nz-button nzType="link" nz-dropdown [nzDropdownMenu]="menu" [nzPlacement]="'bottomCenter'" class="dropdown-trigger">
+        Объявления
+      </button>
+      <nz-dropdown-menu #menu="nzDropdownMenu" class="dropdown-menu">
+        <ul nz-menu>
+          <li nz-menu-item>
+            <a routerLink="/company/ad" routerLinkActive="active">Добавить объявление</a>
+          </li>
+          <li nz-menu-item>
+            <a routerLink="/company/ads" routerLinkActive="active">Все объявления</a>
+          </li>
+        </ul>
+      </nz-dropdown-menu>
+
+      <a nz-button nzType="link" routerLink="/about" routerLinkActive="active">О нас</a>
+      <a nz-button nzType="link" (click)="logout()" routerLinkActive="active">Выход</a>
+    </div>
+  </nz-header>
+</div>
+
+<router-outlet></router-outlet>

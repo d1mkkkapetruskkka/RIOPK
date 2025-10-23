@@ -1,0 +1,31 @@
+<nz-table #basicTable [nzPageSize]="20" [nzShowPagination]="false" style="padding: 30px;" ngSkipHydration>
+    <thead>
+        <tr>
+            <th style="font-weight: bolder; color: #003973;">Услуга</th>
+            <th style="font-weight: bolder; color: #003973;">Дата</th>
+            <th style="font-weight: bolder; color: #003973;">Статус</th>
+            <th style="font-weight: bolder; color: #003973;">Действие</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let booking of bookedServices">
+            <td style="font-weight: 600">{{ booking.serviceName }}</td>
+            <td>{{ booking.bookDate | date : "dd/MM/yyyy" }}</td>
+            <td style="font-weight: 600">
+                {{ booking.reservationStatus === 'PENDING' ? 'Ожидание' :
+                   booking.reservationStatus === 'APPROVED' ? 'Принято' :
+                   booking.reservationStatus === 'REJECTED' ? 'Отклонено' :  
+                   booking.reservationStatus }}
+            </td>
+            <td>
+                <button *ngIf="booking.reviewStatus == 'FALSE' && booking.reservationStatus === 'APPROVED'" 
+                        style="margin-left: 10px; margin-top: 15px" 
+                        nzSize="small" 
+                        nz-button 
+                        nzType="primary" nzDanger
+                        routerLink="/client/review/{{booking.id}}"
+                        class="custom-button">Оценить</button>
+            </td>
+        </tr>
+    </tbody>
+</nz-table>

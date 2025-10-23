@@ -1,0 +1,99 @@
+<div class="analytics-page">
+
+  <div class="analytics-toolbar">
+    <button class="report-btn" (click)="downloadPDF()" aria-label="Скачать PDF-отчет">
+      PDF-отчет
+    </button>
+  </div>
+
+  <section class="analytics-charts-row" id="charts-container" aria-label="Аналитические диаграммы">
+
+    <!-- Круговая диаграмма -->
+    <article class="chart-block" role="region" aria-labelledby="pie-chart-label" tabindex="0">
+  <h2 id="pie-chart-label" class="chart-label">Популярность бытовых услуг</h2>
+  <div class="chart-with-legend">
+    <canvas baseChart
+            [data]="pieChartData"
+            [type]="pieChartType"
+            [legend]="false"
+            class="chart-canvas"
+            aria-describedby="pie-chart-summary"
+            role="img"
+            tabindex="0"
+            aria-label="Круговая диаграмма популярности бытовых услуг">
+    </canvas>
+    <ul class="legend-list">
+      <li *ngFor="let label of pieChartData.labels; let i = index">
+        <span class="legend-color" [style.backgroundColor]="getPieColor(i)"></span>
+        {{ label }}
+      </li>
+    </ul>
+  </div>
+  <p id="pie-chart-summary" class="chart-summary" tabindex="0">
+    Всего заказов: {{ totalOrders }}
+  </p>
+</article>
+
+    <!-- Гистограмма по рейтингам -->
+    <article class="chart-block" role="region" aria-labelledby="bar-chart-label" tabindex="0">
+      <h2 id="bar-chart-label" class="chart-label">Распределение заказов по рейтингу</h2>
+      <canvas baseChart
+              [data]="barChartData"
+              [type]="barChartType"
+              [options]="barChartOptions"
+              class="chart-canvas"
+              aria-describedby="bar-chart-summary"
+              role="img"
+              tabindex="0"
+              aria-label="Гистограмма распределения заказов по рейтингу">
+      </canvas>
+      <p id="bar-chart-summary" class="chart-summary" tabindex="0">
+        Всего отзывов: {{ totalReviews }}
+      </p>
+    </article>
+
+    <!-- Гистограмма по датам заказов -->
+    <article class="chart-block" role="region" aria-labelledby="date-bar-chart-label" tabindex="0">
+      <h2 id="date-bar-chart-label" class="chart-label">Гистограмма заказов по датам</h2>
+      <canvas baseChart
+              [data]="dateBarChartData"
+              [type]="dateBarChartType"
+              [options]="dateBarChartOptions"
+              class="chart-canvas"
+              aria-describedby="date-bar-chart-summary"
+              role="img"
+              tabindex="0"
+              aria-label="Гистограмма количества заказов по датам">
+      </canvas>
+      <p id="bar-chart-summary" class="chart-summary" tabindex="0">
+        Всего отзывов: {{ totalReviews }}
+      </p>
+    </article>
+
+   <article class="chart-block" role="region" aria-labelledby="status-pie-chart-label" tabindex="0">
+  <h2 id="status-pie-chart-label" class="chart-label">Статусы заказов</h2>
+  <div class="chart-with-legend">
+    <canvas baseChart
+            [data]="statusPieChartData"
+            [type]="statusPieChartType"
+            [legend]="false"
+            class="chart-canvas"
+            aria-describedby="status-pie-chart-summary"
+            role="img"
+            tabindex="0"
+            aria-label="Круговая диаграмма распределения заказов по статусам">
+    </canvas>
+    <ul class="legend-list">
+      <li *ngFor="let label of statusPieChartData.labels; let i = index">
+        <span class="legend-color" [style.backgroundColor]="getStatusColor(i)"></span>
+        {{ label }}
+      </li>
+    </ul>
+  </div>
+  <p id="pie-chart-summary" class="chart-summary" tabindex="0">
+    Всего заказов: {{ totalOrders }}
+  </p>
+</article>
+
+  </section>
+</div>

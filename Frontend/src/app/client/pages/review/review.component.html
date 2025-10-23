@@ -1,0 +1,32 @@
+<div class="parent">
+    <div class="child">
+
+            <div nz-row class="imgDiv">
+                <h2 style="margin-left:200px;">Оставить отзыв</h2>
+            </div>
+
+            <form nz-form [formGroup]="validateForm" (ngSubmit)="giveReview()" #reviewForm="ngForm">
+
+                    <div nz-col nzSpan="24">
+                        <nz-form-item>
+                            <nz-form-control nzHasFeedback [nzXs]="24" nzErrorTip="Это поле обязательно!">
+                                <textarea rows="5" nz-input placeholder="Оставьте отзыв" formControlName="review"></textarea>
+                            </nz-form-control>
+                        </nz-form-item>
+                    </div>
+
+                    <div nz-col nzSpan="24">
+                        <nz-form-item>
+                            <nz-form-control nzHasFeedback [nzXs]="24" nzErrorTip="Это поле обязательно!">
+                                <nz-rate formControlName="rating"></nz-rate>
+                            </nz-form-control>
+                        </nz-form-item>
+                    </div>
+
+                <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'"class="custom-button">
+                    Оставить
+                </button>
+
+            </form>
+    </div>
+</div>
