@@ -59,6 +59,16 @@
 
 ### C4-модель
 
+- Контейнерный уровень
+<img width="753" height="782" alt="image" src="https://github.com/user-attachments/assets/ba330bdd-18c3-4c6a-b22d-51bd355cab20" />
+
+-Компонентный уровень
+<img width="975" height="616" alt="image" src="https://github.com/user-attachments/assets/ab62f56e-e16d-43cb-97c8-b9744d515f59" />
+
+- Кодовый уровень
+<img width="975" height="401" alt="image" src="https://github.com/user-attachments/assets/b472be0c-56b9-4e1c-baa6-8a52adf2308e" />
+
+
 ### Схема данных
 
 <img width="1081" height="680" alt="реляционная модель drawio" src="https://github.com/user-attachments/assets/1d986b0a-6d4e-4193-82c3-87c37b751bc2" />
