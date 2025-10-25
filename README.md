@@ -71,7 +71,7 @@
 
 ### Схема данных
 
-<img width="1081" height="680" alt="реляционная модель drawio" src="https://github.com/user-attachments/assets/1d986b0a-6d4e-4193-82c3-87c37b751bc2" />
+<img width="1081" height="599" alt="реляционная модель drawio" src="https://github.com/user-attachments/assets/5675313c-b270-4dbf-b057-20a3855285fa" />
 
 
 ## **Функциональные возможности**
